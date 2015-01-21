@@ -6,4 +6,8 @@ class DishItem(scrapy.Item):
     cuisine = scrapy.Field()
     name = scrapy.Field()
 
+class MaterialItem(scrapy.Item):
+    category = scrapy.Field()
+    name = scrapy.Field()
+    desc = scrapy.Field()
         

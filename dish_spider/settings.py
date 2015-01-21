@@ -7,6 +7,7 @@ USER_AGENT = 'baidu spider (http://www.baidu.com)'
 SPIDER_MODULES = ['dish_spider.spiders']
 NEWSPIDER_MODULE = 'dish_spider.spiders'
 ITEM_PIPELINES = {
-    'dish_spider.pipelines.MeishijPipeline': 300,
+    'dish_spider.pipelines.MeishijDishPipeline': 300,
+    'dish_spider.pipelines.MeishijMaterialPipeline': 400,
 }
 

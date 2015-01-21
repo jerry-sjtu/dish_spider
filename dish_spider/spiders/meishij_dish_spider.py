@@ -3,8 +3,8 @@ from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors import LinkExtractor
 from dish_spider.items import DishItem
 
-class MeishijSpider(CrawlSpider):
-    name = "meishij"
+class MeishijDishSpider(CrawlSpider):
+    name = "meishij_dish"
     allowed_domains = ["meishij.net"]
     start_urls = [
         'http://www.meishij.net/chufang/diy/guowaicaipu1/canqianxiaochi/',
