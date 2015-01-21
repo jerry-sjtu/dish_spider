@@ -21,10 +21,29 @@ class MeishijMaterialSpider(CrawlSpider):
     ]
 
     shucai_allow = ('shicai/shucai_list$', 'shicai/shucai_list.page=[0-9]+')
-    shucai_deny = ()
+    shuiguo_allow = ('shicai/shuiguo_list$', 'shicai/shuiguo_list.page=[0-9]+')
+    shulei_allow = ('shicai/shuleidianfen_list$', 'shicai/shuleidianfen_list.page=[0-9]+')
+    junzao_allow = ('shicai/junzao_list$', 'shicai/junzao_list.page=[0-9]+')
+    xurou_allow = ('shicai/xurou_list$', 'shicai/xurou_list.page=[0-9]+')
+    qinrou_allow = ('shicai/qinrou_list$', 'shicai/qinrou_list.page=[0-9]+')
+    yuxia_allow = ('shicai/yuxiaxiebei_list$', 'shicai/yuxiaxiebei_list.page=[0-9]+')
+    danlei_allow = ('shicai/danlei_list$', 'shicai/danlei_list.page=[0-9]+')
+    gulei_allow = ('shicai/gulei_list$', 'shicai/gulei_list.page=[0-9]+')
+    gandou_allow = ('shicai/gandou_list$', 'shicai/gandou_list.page=[0-9]+')
+    jianguo_allow = ('shicai/jianguozhongzi_list$', 'shicai/jianguozhongzi_list.page=[0-9]+')
 
     rules = (
-        Rule(LinkExtractor(allow=shucai_allow, deny=shucai_deny), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=shucai_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=shuiguo_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=shulei_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=junzao_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=xurou_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=qinrou_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=yuxia_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=danlei_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=gulei_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=gandou_allow, deny=()), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=jianguo_allow, deny=()), callback='parse_item', follow=True),
     )
 
     category_dict = dict()
